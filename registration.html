@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH. ASSEMBLY | REGISTRATION</title>
+    <link rel="icon" trype="image/x-icon" href="../front_end/images/main_logo.png">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=BBH+Sans+Bogle&family=Black+Ops+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap');:root
+
+/* STYLE FOR REGISTRATION START HERE */
+body.registration-page {
+    margin: 0;
+    padding: 0;
+    background-image: url('../front_end/images/img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.Registration-container {
+    position: fixed;
+    top: 50%;
+    right: 10%;
+    width: 780px;
+    height: 100vh;
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
+    flex-direction: column;
+    transform: translateY(-50%);
+    background: rgba(52, 84, 205, 0.6);  
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.registration-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo-registration {
+  width: 90px;
+  height: 90px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px #00d5ff);
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: none;
+  width: 100%;
+  height: 3px;
+  border-top: 2px solid rgba(0, 255, 255, 0.4);
+  background-color: #87cefa;
+  margin-top: 15px;
+}
+
+.registration-header h1 {
+  font-size: 45px;
+  color: #00e6ff;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px #1800ad, 0 0 15px #1800ad;
+  font-family: 'Black Ops One', sans-serif;
+  margin: 0;
+}
+
+.reg-h2 {
+  font-size: 30px;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #8c52ff;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+input, select {
+  width: 97%;
+  padding: 10px;
+  margin: 15px auto;
+  border: none;
+  border-radius: 0px;
+  font-size: 15px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+#street {
+  width: 58%;
+}
+
+#barangay {
+  width: 48%;
+}
+
+#landmark {
+  width: 300.5%;
+  gap: 6px;
+}
+
+#landmark {
+  padding: 10px;
+  border-radius: 0;
+  border: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.declaration-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  width: fit-content;
+  margin-top: 15px;
+  margin-left: 0;
+  position: relative;
+  left: 0;
+  transform: none;
+}
+
+.declaration-wrapper input[type="checkbox"] {
+  margin: 0;
+  transform: scale(1.1);
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  accent-color: var(--bg-black-600);
+}
+
+.declaration-label {
+  color: var(--text-black-95);
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.registration-button-group {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.Registration-container button {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registration-button-group button {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+#registerBtn {
+  background-color: #e63946;
+  transition: all 0.5s ease-in-out;
+}
+
+#registerBtn:hover {
+  transform: scale(1.05) translateY(-3px);
+  background-color: #b71c1c;
+}
+
+#backBtn {
+  background-color: #00b4d8;
+  transition: all 0.5s ease-in-out;
+}
+
+#backBtn:hover {
+  transform: scale(1.05) translateY(-3px);
+  background-color: #0077b6;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 999;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  color: black;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 350px;
+  animation: slideDown 0.5s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#modal-ok {
+  background: var(--bg-black-500);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+/* STYLE FOR REGISTRATION ENDS HERE */
+    </style>
+</head>
+
+
+
+<body class="registration-page">
+
+    <div class="main-container">
+    <div class="Registration-container">
+      <div class="registration-header">
+        <img src="../front_end/images/main_logo.png" alt="Tech Assembly Logo" class="logo-registration" />  
+        <h1>REGISTRATION PORTAL</h1>
+        <hr>
+      </div>
+
+      <form id="registerForm">
+        <h2 class="reg-h2">Basic Information</h2>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+
+        <h2 class="reg-h2">Contact Information</h2>
+        <div class="row">
+          <input type="text" id="street" placeholder="Street/Compound/Block no." required>
+          <input type="text" id="barangay" placeholder="Barangay" required>
+        </div>
+        <div class="row">
+          <!-- City Dropdown -->
+          <select id="city" required>
+            <option value="">Select City</option>
+            <option value="Manila">Manila</option>
+            <option value="Quezon City">Quezon City</option>
+            <option value="Makati">Makati</option>
+            <option value="Pasig">Pasig</option>
+            <option value="Caloocan">Caloocan</option>
+            <option value="Taguig">Taguig</option>
+          </select>
+
+            <input type="text" id="zipcode" placeholder="(Ex. 1119)" required>
+
+          <!-- Province Dropdown -->
+          <select id="province" required>
+            <option value="">Select Province</option>
+            <option value="Metro Manila">Metro Manila</option>
+            <option value="Cavite">Cavite</option>
+            <option value="Laguna">Laguna</option>
+            <option value="Bulacan">Bulacan</option>
+            <option value="Rizal">Rizal</option>
+          </select>
+        </div>
+
+        <div class="row">
+            <input type="text" id="landmark" placeholder="Landmark" required>
+            <input type="text" id="contact" placeholder=" Contact Number (+63):" required>
+        </div>
+
+
+        <div class="declaration-wrapper">
+          <input type="checkbox" id="declaration" required>
+          <div class="declaration-label">
+            I hereby declare that the information provided is accurate and correct.
+          </div>
+        </div>
+
+
+        <div class="registration-button-group">
+            <button type="button" id="backBtn" class="btn-back">Back to Login</button>
+            <button type="button" id="registerBtn" class="btn-login">Register</button> 
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="modal-title">Notice</h3>
+      <p id="modal-message"></p>
+      <button id="modal-ok">OK</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- Element Selection ---
+    const orderForm = document.getElementById('registerForm');
+    const cancelButton = document.querySelector('.btn-back'); 
+
+    // --- Handle Cancel Button Click ---
+    if (cancelButton && orderForm) {
+        cancelButton.addEventListener('click', function(event) {
+            
+            // Prevent the button from triggering any default form actions
+            event.preventDefault(); 
+            
+            // Show the confirmation pop-up. The 'confirm()' function returns true if OK is clicked, false if Cancel is clicked.
+            const userConfirmed = confirm('Are you sure you want to exit?');
+            
+            if (userConfirmed) {
+                // If the user clicks 'OK'
+                
+                // 1. Clear all form fields
+                orderForm.reset();
+                
+                // 2. Redirect to home.html
+                window.location.href = "login.html";
+            }
+            // If the user clicks 'Cancel' on the pop-up, no code runs here, and the user remains on the same page.
+        });
+    }
+
+    // Since you removed the Order button validation, we DO NOT include the checkFormValidity logic here.
+    // The Order button relies entirely on the 'required' attribute in your HTML.
+});
+  </script>
+
+</body>
+</html>
