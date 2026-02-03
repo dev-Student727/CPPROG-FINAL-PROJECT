@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=BBH+Sans+Bogle&family=Black+Ops+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap');:root
-{
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=BBH+Sans+Bogle&family=Black+Ops+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap');
+
+:root {
     --bg-black-900: #8c52ff;
     --bg-black-800: #5ce1e6;
     --bg-black-700: #ffffff;
