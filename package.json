@@ -1,0 +1,23 @@
+{
+  "name": "cpprog-final-project",
+  "version": "1.0.0",
+  "description": "Our platform is a dedicated e-commerce ecosystem designed to bridge the gap between high-performance hardware and a seamless shopping experience. While many customers face uncertainty when ordering through third-party assemblers or unverified marketplaces—often dealing with compatibility errors and lackluster support—Computer Parts Online Shop is built to eliminate those frustrations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-Student727/CPPROG-FINAL-PROJECT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-Student727/CPPROG-FINAL-PROJECT/issues"
+  },
+  "homepage": "https://github.com/dev-Student727/CPPROG-FINAL-PROJECT#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  }
+}
